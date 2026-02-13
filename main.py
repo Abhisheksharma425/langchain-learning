@@ -30,6 +30,7 @@ agent = create_sql_agent(llm, db=db, agent_type="openai-tools", verbose=True)
 
 
 agent.invoke({"input": "how many customers are there?"})
+print(hasattr(agent, "get_graph"))
 # write_query = create_sql_query_chain(llm, db)
 
 # print(write_query.invoke({"question": "How many tables are in the database?"}))
